@@ -1,0 +1,141 @@
+.body_total {
+    display: flex;
+    height: 400px;
+}
+
+
+.filter_parent {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    flex: 1 1 30%;
+}
+
+.body_addstud {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 30%;
+}
+
+.input_parent {
+    position: relative;
+}
+
+.filter {
+    margin-bottom: 5px;
+    height: 20px;
+    width: 100%;
+}
+
+.filter_header {
+    font-size: 12px;
+    height: 20px;
+    margin: 0px;
+}
+
+.del_filt {
+    font-size: 12px;
+    background-color: burlywood;
+}
+
+.but_addstud {
+    margin-bottom: 10px;
+    padding: 3px 80px 3px 80px;
+    height: 30px;
+    font-size: 12px;
+    background-color: burlywood;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    display: flex;
+    flex: 1 1 40%;
+}
+
+.form-control:nth-child(4), .form-control:nth-child(6) {
+    margin-bottom: 0px;
+}
+
+.array_addstud {
+    font-size: 12px;
+    background-color: burlywood;
+}
+
+.eror_msghide_birth, .eror_msghide_startyear {
+    font-size: 8px;
+    color:white;
+    margin: 0;
+    height: 10px;
+}
+
+.eror_msgshow_birth, .eror_msgshow_startyear {
+    font-size: 8px;
+    color: red;
+    margin: 0;
+    height: 10px;
+}
+
+.finalcheck_namehide {
+    color: white;
+    font-size: 8px;
+    position: absolute;
+    left: -60px;
+    top:20px;
+}
+
+.finalcheck_nameshow {
+    color: red;
+}
+
+.finalcheck_dephide {
+    color: white;
+    font-size: 8px;
+    position: absolute;
+    left:-80px;
+    top: 260px;
+}
+
+.finalcheck_depshow {
+    color: red;
+}
+
+.finalcheck_yearhide {
+    color: white;
+    font-size: 8px;
+    position: absolute;
+    left: -55px;
+    top: 165px;
+}
+
+.finalcheck_yearshow {
+    color: red;
+    z-index: 1;
+}
+
+.finalcheck_yearhidecorr {
+    z-index: 1;
+    color: white;
+    font-size: 8px;
+    position: absolute;
+    left: -85px;
+    top: 155px;
+}
+
+.finalcheck_yearshowcorr {
+    color: red;
+}
+
+.finalcheck_yearhideed {
+    color: white;
+    font-size: 8px;
+    position: absolute;
+    left: -105px;
+    top: 210px;
+}
+
+.finalcheck_yearshowed {
+    color: red;
+}
+
+
+
