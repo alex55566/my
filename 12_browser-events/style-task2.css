@@ -1,0 +1,14 @@
+.client__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.client__info {
+    margin-bottom: 20px;
+}
+
+.client__data {
+    width: 100px;
+    min-height: 100px;
+}

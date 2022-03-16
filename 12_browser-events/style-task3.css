@@ -1,0 +1,14 @@
+.outside {
+    height: 600px;
+    width: 200px;
+    background-color: grey;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.butt {
+    padding: 10px 20px;
+}

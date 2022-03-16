@@ -1,0 +1,25 @@
+#app {
+    position: relative;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px
+}
+
+.input {
+    padding: 2px;
+    border: 2px solid grey;
+}
+
+.infoerror {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    background-color: bisque;
+}
+
+.active {
+    background-color: burlywood;
+}

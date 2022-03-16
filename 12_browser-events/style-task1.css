@@ -1,0 +1,29 @@
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    min-width: 160px;
+    height: 200px;
+    overflow: auto;
+    text-align: center;
+}
+
+.is-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
