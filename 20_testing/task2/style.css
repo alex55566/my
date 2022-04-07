@@ -1,0 +1,169 @@
+.startbutton {
+    margin-top: 20px ;
+    display: block;
+    background-color: violet;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.number__cards {
+    background-color: orange;
+    border: 1px solid orange;
+    max-width: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.headtime {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.time {
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    padding-top: 6px;
+    text-align: center;
+    max-width: 60px;
+    height:24px
+}
+
+.gameover {
+    background-color: violet;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    position: absolute;
+    top: 47px;
+    padding: 2px 2px 2px 2px;
+}
+
+.parentcard {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.card {
+    border: 2px solid black;
+    height: 50px;
+    color: grey;
+    background-color:grey;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 25px;
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    justify-content: center;
+    transition: all 0.3s linear;
+    transform: rotateY(180deg)
+}
+
+.card.active {
+    border: 2px solid black;
+    height: 50px;
+    color: grey;
+    background-color:white;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 25px;
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    justify-content: center;
+    transform: rotateY(0deg)
+}
+
+.card16 {
+    flex: 1 1 20%;
+}
+
+
+.card16:nth-child(4), .card16:nth-child(8), .card16:nth-child(12), .card16:nth-child(16) {
+    margin-right: 0px;
+}
+
+.card16.active {
+    flex: 1 1 20%;
+}
+
+.card16.active:nth-child(4), .card16.active:nth-child(8), .card16.active:nth-child(12), .card16.active:nth-child(16) {
+    margin-right: 0px;
+}
+
+.card4 {
+    flex: 1 1 40%;
+}
+
+
+.card4:nth-child(2), .card4:nth-child(4) {
+    margin-right: 0px;
+}
+
+.card4.active {
+    flex: 1 1 40%;
+}
+
+.card4.active:nth-child(2), .card4.active:nth-child(4) {
+    margin-right: 0px;
+}
+
+
+.card36 {
+    flex: 1 1 13%;
+}
+
+
+.card36:nth-child(6), .card36:nth-child(12), .card36:nth-child(18), .card36:nth-child(24), .card36:nth-child(30), .card36:nth-child(36)     {
+    margin-right: 0px;
+}
+
+.card36.active {
+    flex: 1 1 13%;
+}
+
+.card36.active:nth-child(6), .card36.active:nth-child(12), .card36.active:nth-child(18), .card36.active:nth-child(24), .card36.active:nth-child(30), .card36.active:nth-child(36) {
+    margin-right: 0px;
+}
+
+
+.card64 {
+    flex: 1 1 10%;
+}
+
+
+.card64:nth-child(8), .card64:nth-child(16), .card64:nth-child(24), .card64:nth-child(32), .card64:nth-child(40), .card64:nth-child(48), .card64:nth-child(56), .card64:nth-child(64)     {
+    margin-right: 0px;
+}
+
+.card64.active {
+    flex: 1 1 10%;
+}
+
+.card64.active:nth-child(8), .card64.active:nth-child(16), .card64.active:nth-child(24), .card64.active:nth-child(32), .card64.active:nth-child(40), .card64.active:nth-child(48), .card64.active:nth-child(56), .card64.active:nth-child(64) {
+    margin-right: 0px;
+}
+
+.card100 {
+    flex: 1 1 7%;
+}
+
+
+.card100:nth-child(10), .card100:nth-child(20), .card100:nth-child(30), .card100:nth-child(40), .card100:nth-child(50), .card100:nth-child(60), .card100:nth-child(70), .card100:nth-child(80), .card100:nth-child(90),  .card100:nth-child(100) {
+    margin-right: 0px;
+}
+
+.card100.active {
+    flex: 1 1 7%;
+}
+
+.card100.active:nth-child(10), .card100.active:nth-child(20), .card100.active:nth-child(30), .card100.active:nth-child(40), .card100.active:nth-child(50), .card100.active:nth-child(60), .card100.active:nth-child(70), .card100.active:nth-child(80), .card100.active:nth-child(90),  .card100.active:nth-child(100) {
+    margin-right: 0px;
+}
