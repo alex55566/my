@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixin';
+
+
+.section-footer {
+    background-color: $colorBlack;
+    color: $colorWhite;
+}
+
+.section-footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}

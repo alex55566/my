@@ -1,0 +1,71 @@
+@mixin containerStyle {
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 1700px;
+}
+
+@mixin containerStyle1024 {
+    margin: 0 auto;
+    padding: 0 12px;
+    max-width: 987px;
+}
+
+@mixin containerStyle768 {
+    margin: 0 auto;
+    padding: 0 12px;
+    max-width: 738px;
+}
+
+@mixin containerStyle320 {
+    margin: 0 auto;
+    padding: 0 12px;
+    max-width: 302px;
+}
+
+@mixin fontHeader {
+    font: {
+        family: 'TTFirsNeue';
+        size: 24px;
+        weight: 700;
+    }
+}
+
+@mixin fontParagraph {
+    font: {
+        family: 'Roboto';
+        size: 16px;
+        weight: 400;
+    }
+    line-height: 22px;
+}
+
+@mixin img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin positionBtnonCard {
+    top: 406px;
+    bottom: 0;
+    right: 0;
+    left: 60px;
+}
+
+@mixin positionBtnonCard1024 {
+    top: 426px;
+    bottom: 0;
+    right: 0;
+    left: 30px;
+}
+
+@mixin positionBtnonCard768 {
+    top: 223px;
+    bottom: 0;
+    right: 0;
+    left: 29px;
+}
+
+@mixin input {
+    border: none;
+    background-color: $colorMercury;
+}

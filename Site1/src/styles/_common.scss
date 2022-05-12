@@ -1,0 +1,274 @@
+@import 'mixin';
+@import 'variables';
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+svg path {
+    fill: inherit;
+    stroke: inherit;
+}
+
+.btn {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.btnmain {
+    padding: 13px 20px;
+    color: $colorWhite;
+    background-color: $colorBlue;
+    border: 2px solid $colorBlue;
+    &:hover {
+        border: 2px solid $colorTuscany;
+        background-color: $colorTuscany;
+    }
+    &:focus {
+        border: 2px solid $colorTuscany;
+        background-color: $colorBlue;
+    }
+    &:active {
+        border: 2px solid $colorGrenadier;
+        background-color: $colorGrenadier;
+    }
+}
+
+.btnmain_empty {
+    padding: 12px 20px;
+    color: $colorWhite;
+    border: 3px solid $colorBlue;
+    &:hover {
+        border: 3px solid $colorBlue;
+        background-color: $colorBlue;
+    }
+    &:focus {
+        border: 3px solid $colorBlue;
+        background-color: $colorTuscany;
+    }
+    &:active {
+        border: 3px solid $colorGrenadier;
+        background-color: $colorGrenadier;
+    }
+}
+
+.btnmain,
+.btnmain_empty {
+    transition: border, background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.title {
+    @include fontHeader;
+}
+
+.text {
+    @include fontParagraph;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local(''), url('./fonts/Roboto-Bold.woff2') format('woff2'), url('./fonts/Roboto-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local(''), url('./fonts/Roboto-Regular.woff2') format('woff2'), url('./fonts/Roboto-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTFirsNeue';
+    src: local(''), url('./fonts/TTFirsNeue-Bold.woff2') format('woff2'), url('./fonts/TTFirsNeue-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTFirsNeue';
+    src: local(''), url('./fonts/TTFirsNeue-Medium.woff2') format('woff2'), url('./fonts/TTFirsNeue-Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTFirsNeue';
+    src: local(''), url('./fonts/TTFirsNeue-Regular.woff2') format('woff2'), url('./fonts/TTFirsNeue-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local(''), url('./fonts/MullerRegular.woff2') format('woff2'), url('./fonts/MullerRegular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local(''), url('./fonts/MullerRegular.woff2') format('woff2'), url('./fonts/MullerRegular.woff') format('woff');
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+
+.heading-unvisible {
+        position: absolute !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px !important;
+        width: 1px !important;
+        padding: 0 !important;
+        border: 0 !important;
+        overflow: hidden;
+    }
+
+body {
+    font-family: 'Roboto', 'TTFirsNeue', 'Muller', sans-serif;
+}
+
+.container {
+    @include containerStyle
+}
+
+a:active,
+a:focus {
+    outline: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+input:active,
+textarea:active {
+    outline: none;
+}
+
+ :focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+textarea {
+    resize: horizontal;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.title {
+    margin-bottom: 22px;
+    font: {
+        family: 'Roboto';
+        weight: 400;
+        size: 48px;
+    }
+}
+
+.active {
+    display: block;
+}
+
+@media (max-width:1315px) {
+    .container {
+        @include containerStyle1024
+    }
+}
+
+@media (max-width:890px) {
+    .container {
+        @include containerStyle768
+    }
+    .btnmain {
+        padding: 13px 22px;
+    }
+}
+
+@media (max-width:683px) {
+    .container {
+        @include containerStyle320
+    }
+    .btnmain {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+    .btnmain_empty {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+    .btnmain:hover {
+        border: 2px solid $colorBlue;
+        background-color: $colorBlue;
+    }
+    .btnmain_empty:hover {
+        border: 3px solid $colorBlue;
+        background-color: transparent;
+    }
+}

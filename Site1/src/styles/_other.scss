@@ -1,0 +1,16 @@
+    @import 'variables';
+    @import 'mixin';
+
+    .empty-text {
+        font : {
+            family: 'TTFirsNeue';
+            size: 18px;
+        }
+    }
+
+    .section__news,  .section__vacancy {
+        margin-bottom: $paragraphGap;
+       
+    }
+
+  

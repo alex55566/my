@@ -1,0 +1,30 @@
+@import 'variables';
+.section__ways {
+    margin-bottom: $paragraphGap;
+    background-color: $colorBlack;
+    color: $colorWhite;
+}
+
+.section-ways__container {
+    padding-top: $sectionTopGap;
+}
+
+.ways-card__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-auto-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: $gridGap;
+    padding-top: 32px;
+    padding-bottom: 68px;
+}
+
+.ways-card-item {
+    padding: 20px;
+    border: 1px solid $colorWhite;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ways-card-item__title {
+    margin-bottom: 25px;
+}
