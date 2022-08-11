@@ -1,0 +1,148 @@
+@import 'variables';
+@import 'mixin';
+.sub__footer {
+    display: none;
+}
+
+.section-footer {
+    background-color: $colorBlack;
+    color: $colorWhite;
+}
+
+.section-footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.section-footer__list-social {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-footer__main-logo {
+    margin-bottom: 5px;
+}
+
+.left-side__text {
+    @include fontParagraph;
+    font-size: 14px;
+    letter-spacing: .3px;
+}
+
+.middle-side {
+    max-width: 360px;
+    margin-left: -125px;
+}
+
+.middlee-side__text {
+    line-height: 22px;
+}
+
+.right-side__text {
+    margin-bottom: 10px;
+}
+
+.section-footer__item-social:not(:last-child) {
+    margin-right: $headerFooterGap;
+}
+
+.section-footer__item-social:first-child {
+    margin-left: $headerFooterGap - 3px;
+}
+
+.section-footer {
+    fill: #cacaca
+}
+
+.section-footer__item,
+.social-footer {
+    transition: transform, color, background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.section-footer__item:hover {
+    color: $colorOrange;
+    transform: translateY(2px);
+}
+
+.section-footer__link {
+    &:focus {
+        color: $colorWhite;
+        background-color: $colorTuscany;
+    }
+    &:active {
+        color: $colorGrenadier;
+        background-color: transparent;
+    }
+}
+
+.social-footer:hover {
+    fill: $colorOrange;
+    transform: translateY(2px);
+}
+
+.social-footer:active {
+    fill: $colorGrenadier;
+}
+
+.section-footer__btn-social:focus .section-footer__link-social .social-footer {
+    fill: $colorTuscany;
+}
+
+@media (max-width:1315px) {
+    .section-footer__container {
+        padding-top: 25px;
+    }
+    .middle-side {
+        max-width: 360px;
+        margin-left: 70px;
+    }
+    .left-side {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width:890px) {
+    .middle-side {
+        display: none;
+    }
+}
+
+@media (max-width:683px) {
+    .section-footer__container {
+        position: relative;
+        padding-top: 32px;
+        padding-bottom: 27px;
+    }
+    .left-side {
+        text-align: center;
+        position: absolute;
+        top: 130px;
+        left: 68px;
+    }
+    .right-side {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sub__footer {
+        display: block;
+        height: 185px;
+        background-color: $colorTundora;
+    }
+    .left-side__text {
+        font-size: 10px;
+        margin-top: -2px;
+    }
+    .section-footer__item:hover {
+        color: $colorSilver;
+        transform: translateY(0px);
+    }
+    .social-footer:hover {
+        fill: $colorSilver;
+        transform: translateY(0px);
+    }
+}

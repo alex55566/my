@@ -1,0 +1,115 @@
+@import 'variables';
+@import 'mixin';
+
+.section__projects {
+    padding-bottom: 50px;
+    background-color: rgba(246, 246, 248, 1);
+    margin-bottom: 115px;
+}
+
+.container.section-projects__container {
+    max-width: 1394px;
+
+}
+
+.section-projects__container {
+    padding-bottom: 100px;
+}
+    
+.section-projects__title {
+    margin-bottom: 37px;
+    @include fontHeader;
+    text-align: center;
+}
+
+.section-projects__info {
+    @include fontParagraph;
+    text-align: center;
+    max-width: 730px;
+    margin: 0 auto;
+    margin-bottom: 61px;
+}
+
+.swiper-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.swiper-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1115px;
+    padding-bottom: 72px;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    position: relative;
+    cursor: pointer;
+    width: 255px;
+    height: 255px;
+}
+
+.swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+    border: none;
+    background: transparent;
+    border: 1px solid $colorBlack;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin-right: 10px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0px;
+    left: 8px;
+}
+.swiper-pagination-bullet-active {
+    background: $colorBlack;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+}
+
+
+/* стрелки свайпер  */
+
+.swiper-button-prev::before {
+    content: " ";
+    position: absolute;
+    right: calc(50% - 36px/2);
+    top: 133px;
+    padding: 13px;
+    transform: rotate(135deg);
+    cursor: pointer;
+    z-index: 1;
+    border: solid $colorBlack;
+    border-width: 0 5px 5px 0;
+}
+
+.swiper-button-next::before {
+    content: " ";
+    position: absolute;
+    right: calc(50% - 12px/2);
+    top: 133px;
+    padding: 13px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    z-index: 1;
+    border: solid $colorBlack;
+    border-width: 0 5px 5px 0;
+}

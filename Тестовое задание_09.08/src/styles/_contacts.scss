@@ -1,0 +1,336 @@
+.section__contacts {
+    margin-bottom: $paragraphGap;
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: grayscale(1);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: $colorDoveGrey;
+    border-radius: 50%;
+}
+
+.close:before,
+.close:after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 4px;
+    width: 13px;
+    height: 2px;
+    background: $colorWhite;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.map {
+    position: relative;
+    height: 460px;
+}
+
+.map__background {
+    position: absolute;
+    padding-top: 172px;
+    padding-left: 60px;
+    z-index: 1;
+    width: 48.5%;
+    height: 100%;
+    background: rgba(32, 32, 32, 0.85);
+}
+
+.map__name {
+    @include fontHeader;
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+
+.map__address {
+    line-height: 28px;
+}
+
+.map__contacts {
+    max-width: 300px;
+    color: $colorWhite;
+}
+
+.btn__call-link {
+    vertical-align: middle;
+}
+
+.btn__call-link {
+    margin-right: 2px;
+}
+
+.map__phone-text {
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: .6px;
+    margin-left: -4px;
+}
+
+.ymaps-2-1-79-zoom {
+    top: 270px;
+}
+
+.ymaps-2-1-79-_hidden-text {
+    top: 350px;
+}
+
+.ymaps-2-1-79-float-button {
+    border: 10px;
+}
+
+.contacts__block {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-areas: "leftpart__contact rightpart__contact";
+    gap: $gridGap;
+}
+
+.contacts__map {
+    grid-column: 16 span;
+}
+
+.contacts__inputs {
+    grid-column: 8 span;
+}
+
+.contacts__title {
+    margin-bottom: 25px;
+}
+
+.contacts__inputs-title {
+    margin-top: -8px;
+    margin-bottom: 2px;
+    font-weight: 400;
+    letter-spacing: .1px;
+}
+
+.contacts__inputs-text {
+    margin-bottom: 14px;
+}
+
+.inputs-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.inputs-form__name,
+.inputs-form__email {
+    @include input;
+    padding: 15px 23px;
+    border: 1px solid transparent
+}
+
+.inputs-form__comments {
+    @include input;
+    cursor: pointer;
+    position: relative;
+    padding-top: 15px;
+    padding-left: 23px;
+    height: 150px;
+}
+
+.inputs {
+    margin-bottom: 20px;
+}
+
+.js-validate-error-label {
+    @include fontParagraph;
+    left: 23px;
+    font-size: 9px;
+}
+
+.inputs-form__name+.js-validate-error-label {
+    position: absolute;
+}
+
+.inputs-form__email+.js-validate-error-label {
+    position: absolute;
+    top: 70px
+}
+
+.inputs__btn {
+    max-width: 126px;
+}
+
+.inputs:hover ::placeholder {
+    color: $colorOrange
+}
+
+.inputs:hover::-webkit-input-placeholder {
+    color: $colorOrange
+}
+
+.inputs:hover ::-webkit-input-placeholder {
+    color: $colorOrange
+}
+
+.inputs:focus {
+    border: 1px solid $colorOrange;
+}
+
+.call {
+    fill: $colorWhite;
+}
+
+@media (max-width:1315px) {
+    .contacts__map {
+        grid-column: 15 span;
+    }
+    .contacts__inputs {
+        grid-column: 9 span;
+    }
+    .contacts__inputs-title {
+        margin-top: -15px
+    }
+    .map__background {
+        top: 300px;
+        padding-top: 25px;
+        padding-left: 30px;
+        width: 100%;
+        height: 34.5%;
+    }
+    .map__name {
+        margin-bottom: 0px;
+    }
+    .map__phone {
+        position: absolute;
+        top: 110px;
+        left: 120px;
+    }
+    .call {
+        fill: $colorOrange;
+    }
+    .map__phone-text {
+        color: $colorOrange;
+    }
+    .section__contacts {
+        margin-bottom: 65px;
+    }
+}
+
+@media (max-width:890px) {
+    .contacts__map {
+        grid-area: leftpart__contact;
+    }
+    .contacts__inputs {
+        grid-area: rightpart__contact;
+    }
+    .map__background {
+        height: 34.8%;
+        padding-top: 23px;
+    }
+    .section__contacts {
+        margin-bottom: 68px;
+    }
+    .contacts__block {
+        grid-template-columns: 1fr;
+        grid-template-areas: "leftpart__contact" "rightpart__contact";
+    }
+    .map__name {
+        margin-bottom: 3px
+    }
+    .map__contacts {
+        max-width: 436px;
+    }
+    .map__phone {
+        position: static;
+    }
+    .contacts__inputs-text {
+        max-width: 466px;
+    }
+    .inputs {
+        max-width: 465px;
+    }
+    .contacts__inputs-title {
+        margin-bottom: 5px;
+    }
+    .inputs-form__comments {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width:683px) {
+    .section__contacts {
+        margin-bottom: 50px;
+    }
+    .map {
+        height: 472px;
+        width: 100vw;
+        position: relative;
+        margin-left: -50vw;
+        left: 50%;
+        margin-right: -50vw;
+        right: 50%;
+    }
+    .contacts__title {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+    .map__background {
+        height: 33%;
+        top: 315px;
+        padding-left: 19px;
+        padding-top: 26px;
+    }
+    .map__name {
+        margin-bottom: 13px;
+        font-size: 18px;
+    }
+    .map__address {
+        margin-bottom: 8px;
+        width: 267px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .map__phone-text {
+        font-size: 14px;
+    }
+    .contacts__inputs-title {
+        margin-top: -8px;
+        margin-bottom: 11px;
+        font-size: 18px;
+    }
+    .contacts__inputs-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .inputs::placeholder {
+        font-size: 14px;
+    }
+    .inputs::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+    .inputs::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+    .inputs-form__email,
+    .inputs-form__name {
+        padding: 10px 23px;
+    }
+    .inputs-form__comments {
+        margin-bottom: 20px;
+    }
+    .inputs__btn {
+        padding: 11px 10px 9px 10px;
+        max-width: 115px;
+    }
+    .inputs-form__email+.js-validate-error-label {
+        top: 60px
+    }
+}

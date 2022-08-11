@@ -1,0 +1,39 @@
+@import 'variables';
+
+
+.top-wrapper {
+    background-image: url(./images/wrapper.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-header {
+    padding: 42px 0px 41px;
+    color: $colorWhite;
+    border-bottom: 1px solid rgba(161, 161, 161, 1);
+    margin-bottom: 217px;
+}
+
+.section-header__container,
+.section-header__list,
+.section-header__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-header__container {
+    justify-content: flex-end;
+}
+
+.section-header__link {
+    font: {
+        family: 'Montserrat';
+        size: 16px;
+        weight: 500;
+    }
+}
+
+.section-header__item:not(:last-child) {
+    margin-right: 40px;
+}

@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixin';
+
+.section__hero {
+    margin-bottom: 105px;
+}
+.section-hero__container {
+    text-align: center;
+    padding-bottom: 333px;
+  
+}
+
+.section-hero__info {
+    margin-bottom: 20px;
+    font: {
+        family: 'Montserrat';
+        size: 16px;
+        weight: 500;
+    }
+    color: $colorWhite;
+}
+
+.section-hero__title {
+    max-width: 830px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    font: {
+        family: 'Montserrat';
+        size: 48px;
+        weight: 800;
+    }
+    line-height: 64px;
+    color: $colorWhite;
+}
+
+.title-first {
+    padding-right: 8px;
+}
+
+.section-hero__button {
+    padding: 13px 36px;
+    font: {
+        family: 'Montserrat';
+        size: 16px;
+        weight: 500;
+    }
+    background-color: $colorBtn;
+    color: $colorWhite;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
