@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'mixin';
 
+.switch__state {
+    display: none;
+}
+
 .section__standarts {
     background-color: rgba(246, 246, 248, 1);
     padding-bottom: 153px;
@@ -51,6 +55,28 @@
     color: $colorBtn
 }
 
+.section-standarts__link {
+    transition: transform, color, background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.section-standarts__link:hover {
+    color: $colorBtnHover;
+    border-bottom: 1px solid $colorBtnHover;
+}
+
+.section-standarts__link:focus {
+    color: $colorBtnFocus;
+    border-bottom: 1px solid $colorBtnFocus;
+}
+
+.section-standarts__link:active {
+    color: $colorBtnActive;
+    border-bottom: 1px solid $colorBtnActive;
+}
+
+
 .container-cards {
     padding-top: 80px;
     display: grid;
@@ -91,6 +117,85 @@
         weight: 400;
     }
     color: rgba(153, 153, 153, 1)
+}
+
+@media (max-width:1149px) {
+    .standarts-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container.section-standarts__container {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width:989px) {
+    
+    .container-cards {
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 50px;
+        padding-bottom: 50px;
+}
+    .event-info-hide {
+        display: none;
+    }
+    .switch__state {
+        display: block;
+        margin: 0 auto;
+        padding: 13px 48px 14px 34px;
+        background-color: #4985ff;
+        font: {
+            family: 'Montserrat';
+            size: 16px;
+            weight: 500;
+        }
+        color: $colorWhite;
+        border: transparent;
+        border-radius: 21px;
+    }
+
+    .hide-card {
+        display: block;
+    }
+
+    .event-opacity {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out
+    }
+    
+    .opacity-card {
+        opacity: 1;
+    } 
+}
+
+@media (max-width:869px) {
+    .section-standarts__title {
+        font-size: 28px
+    }
+    .wrapper-left {
+        padding-top: 25px;
+    }
+}
+
+
+@media (max-width:590px) {
+    .wrapper-right {
+       width: 320px;
+       height: 250px;
+    }
+
+    .section-standarts__title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .container-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 

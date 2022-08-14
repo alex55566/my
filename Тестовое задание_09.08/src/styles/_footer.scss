@@ -1,148 +1,117 @@
 @import 'variables';
 @import 'mixin';
-.sub__footer {
-    display: none;
+
+.container.section-footer__container {
+    padding-right: 20px;
 }
 
 .section-footer {
-    background-color: $colorBlack;
-    color: $colorWhite;
+    padding-top: 70px;
+    background-color: rgba(246, 246, 248, 1);
 }
 
-.section-footer__container {
+.footer_item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.footer-header {
+    padding-bottom: 32px;
+    @include fontHeaderFooter
+}
+
+.footer_item {
+    @include fontItemFooter
+}
+
+.item-unit_wrapper {
+    padding-bottom: 28px;
+}
+
+.contacts-footer {
+    margin-right: 17px;
+}
+
+.main-footer, .projects-footer, .social-footer {
+    margin-right: 5px;
+}
+
+.item-unit {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    cursor: pointer;
 }
 
-.section-footer__list-social {
-    display: flex;
-    flex-direction: row;
+.item-unit__svg {
+    stroke: $colorStroke
 }
 
-.section-footer__main-logo {
-    margin-bottom: 5px;
-}
-
-.left-side__text {
-    @include fontParagraph;
-    font-size: 14px;
-    letter-spacing: .3px;
-}
-
-.middle-side {
-    max-width: 360px;
-    margin-left: -125px;
-}
-
-.middlee-side__text {
-    line-height: 22px;
-}
-
-.right-side__text {
-    margin-bottom: 10px;
-}
-
-.section-footer__item-social:not(:last-child) {
-    margin-right: $headerFooterGap;
-}
-
-.section-footer__item-social:first-child {
-    margin-left: $headerFooterGap - 3px;
-}
-
-.section-footer {
-    fill: #cacaca
-}
-
-.section-footer__item,
-.social-footer {
-    transition: transform, color, background-color;
+.item-unit, .item-unit__svg  {
+    transition: color, stroke;
     transition-duration: .5s;
-    transition-timing-function: ease;
+    transition-timing-function: ease-in-out;
 }
 
-.section-footer__item:hover {
-    color: $colorOrange;
-    transform: translateY(2px);
+.item-unit:hover {
+    color: $colorBtnHover;
 }
 
-.section-footer__link {
-    &:focus {
-        color: $colorWhite;
-        background-color: $colorTuscany;
-    }
-    &:active {
-        color: $colorGrenadier;
-        background-color: transparent;
-    }
+.item-unit:hover .item-unit__svg {
+    stroke: $colorBtnHover;
 }
 
-.social-footer:hover {
-    fill: $colorOrange;
-    transform: translateY(2px);
+.item-unit:focus {
+    color: $colorBtnFocus;
 }
 
-.social-footer:active {
-    fill: $colorGrenadier;
+.item-unit:focus .item-unit__svg {
+    fill: $colorBtnFocus;
+    stroke: $colorBtnFocus;
 }
 
-.section-footer__btn-social:focus .section-footer__link-social .social-footer {
-    fill: $colorTuscany;
+.item-unit:active {
+    color: $colorBtnActive;
 }
 
-@media (max-width:1315px) {
-    .section-footer__container {
-        padding-top: 25px;
-    }
-    .middle-side {
-        max-width: 360px;
-        margin-left: 70px;
-    }
-    .left-side {
-        margin-top: 5px;
-    }
+.item-unit:active .item-unit__svg {
+    fill: $colorBtnActive;
+    stroke: $colorBtnActive;
 }
 
-@media (max-width:890px) {
-    .middle-side {
-        display: none;
+.footer-subfooter {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    font: {
+        family: 'Montserrat';
+        size: 13px;
+        weight: 400;
     }
+    color: rgba(153, 153, 153, 1);
 }
 
-@media (max-width:683px) {
-    .section-footer__container {
-        position: relative;
-        padding-top: 32px;
-        padding-bottom: 27px;
+@media (max-width:1319px) {
+    .footer_item-wrapper {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        justify-items: center;
     }
-    .left-side {
-        text-align: center;
-        position: absolute;
-        top: 130px;
-        left: 68px;
+
+    .footer-group__projects {
+        padding-right: 80px;
     }
-    .right-side {
-        margin-left: auto;
-        margin-right: auto;
+
+    @media (max-width:590px) {
+        .footer_item-wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4,1fr);
+            justify-items: self-start;
+        }
+        .footer-group__projects {
+            padding-right: unset;
+        }
     }
-    .sub__footer {
-        display: block;
-        height: 185px;
-        background-color: $colorTundora;
-    }
-    .left-side__text {
-        font-size: 10px;
-        margin-top: -2px;
-    }
-    .section-footer__item:hover {
-        color: $colorSilver;
-        transform: translateY(0px);
-    }
-    .social-footer:hover {
-        fill: $colorSilver;
-        transform: translateY(0px);
-    }
+
 }

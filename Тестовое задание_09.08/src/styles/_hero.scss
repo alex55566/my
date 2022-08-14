@@ -49,3 +49,15 @@
     border-radius: 20px;
     border: 1px solid transparent;
 }
+
+@media (max-width:869px) {
+    .section-hero__title {
+        font-size: 36px
+    }
+}
+
+@media (max-width:590px) {
+    .section-hero__title {
+        font-size: 26px
+    }
+}

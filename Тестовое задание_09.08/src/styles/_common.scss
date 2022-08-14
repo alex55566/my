@@ -57,49 +57,6 @@ svg path {
     cursor: pointer;
 }
 
-.btnmain {
-    padding: 13px 20px;
-    color: $colorWhite;
-    background-color: $colorOrange;
-    border: 2px solid $colorOrange;
-    &:hover {
-        border: 2px solid $colorTuscany;
-        background-color: $colorTuscany;
-    }
-    &:focus {
-        border: 2px solid $colorTuscany;
-        background-color: $colorOrange;
-    }
-    &:active {
-        border: 2px solid $colorGrenadier;
-        background-color: $colorGrenadier;
-    }
-}
-
-.btnmain_empty {
-    padding: 12px 20px;
-    color: $colorWhite;
-    border: 3px solid $colorOrange;
-    &:hover {
-        border: 3px solid $colorOrange;
-        background-color: $colorOrange;
-    }
-    &:focus {
-        border: 3px solid $colorOrange;
-        background-color: $colorTuscany;
-    }
-    &:active {
-        border: 3px solid $colorGrenadier;
-        background-color: $colorGrenadier;
-    }
-}
-
-.btnmain,
-.btnmain_empty {
-    transition: border, background-color;
-    transition-duration: .5s;
-    transition-timing-function: ease;
-}
 
 .title {
     @include fontHeader;
@@ -212,39 +169,46 @@ button::-moz-focus-inner {
     display: block;
 }
 
-@media (max-width:1315px) {
-    .container {
-        @include containerStyle1024
-    }
+.btnanim {
+    position: relative;
+    transition: transform, background-color, border-bottom, border;
+    transition-duration: .5s;
+    transition-timing-function: ease;
 }
 
-@media (max-width:890px) {
-    .container {
-        @include containerStyle768
-    }
-    .btnmain {
-        padding: 13px 22px;
-    }
+.btnanim:hover {
+    background-color: $colorBtnHover;
+    border: 1px solid $colorBtn;
 }
 
-@media (max-width:683px) {
+.btnanim::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    bottom: -9px;
+    left: -9px;
+    right: -9px;
+    display: block;
+    border-radius: 100px;
+    border: 3px solid transparent;
+    z-index: 5;
+}
+
+.btnanim:focus::before {
+    border: 3px solid $colorBtn;
+}
+
+.btnanim:active {
+    border: 1px solid $colorBtn;
+    background-color: $colorBtnActive;
+}
+
+.btnanim:active::before {
+    border: 3px solid transparent;
+}
+
+@media (max-width:690px) {
     .container {
         @include containerStyle320
-    }
-    .btnmain {
-        padding: 10px 22px;
-        font-size: 14px;
-    }
-    .btnmain_empty {
-        padding: 10px 18px;
-        font-size: 14px;
-    }
-    .btnmain:hover {
-        border: 2px solid $colorOrange;
-        background-color: $colorOrange;
-    }
-    .btnmain_empty:hover {
-        border: 3px solid $colorOrange;
-        background-color: transparent;
     }
 }

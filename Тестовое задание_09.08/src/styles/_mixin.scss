@@ -4,23 +4,13 @@
     max-width: 1213px;
 }
 
-@mixin containerStyle1024 {
-    margin: 0 auto;
-    padding: 0 12px;
-    max-width: 987px;
-}
-
-@mixin containerStyle768 {
-    margin: 0 auto;
-    padding: 0 12px;
-    max-width: 738px;
-}
-
 @mixin containerStyle320 {
     margin: 0 auto;
-    padding: 0 12px;
-    max-width: 302px;
+    padding: 0 15px;
+    max-width: 1213px;
 }
+
+
 
 @mixin fontHeader {
     font: {
@@ -40,33 +30,22 @@
     line-height: 25px;
 }
 
-@mixin img {
-    background-repeat: no-repeat;
-    background-size: cover;
+@mixin fontHeaderFooter {
+    font: {
+        family: 'Montserrat';
+        size: 18px;
+        weight: 600;
+    }
+    color: $colorBlack; 
 }
 
-@mixin positionBtnonCard {
-    top: 406px;
-    bottom: 0;
-    right: 0;
-    left: 60px;
+
+@mixin fontItemFooter {
+    font: {
+        family: 'Montserrat';
+        size: 14px;
+        weight: 400;
+    }
+    color: rgba(153, 153, 153, 1);
 }
 
-@mixin positionBtnonCard1024 {
-    top: 426px;
-    bottom: 0;
-    right: 0;
-    left: 30px;
-}
-
-@mixin positionBtnonCard768 {
-    top: 223px;
-    bottom: 0;
-    right: 0;
-    left: 29px;
-}
-
-@mixin input {
-    border: none;
-    background-color: $colorMercury;
-}
