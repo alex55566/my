@@ -111,6 +111,7 @@ svg path {
 
 @font-face {
     font-family: 'Roboto';
+    font-display: swap;
     src: local(''), url('./fonts/Roboto-Bold.woff2') format('woff2'), url('./fonts/Roboto-Bold.woff') format('woff');
     font-style: normal;
     font-weight: 700;
@@ -119,6 +120,7 @@ svg path {
 
 @font-face {
     font-family: 'Roboto';
+    font-display: swap;
     src: local(''), url('./fonts/Roboto-Regular.woff2') format('woff2'), url('./fonts/Roboto-Regular.woff') format('woff');
     font-style: normal;
     font-weight: 400;
@@ -127,6 +129,7 @@ svg path {
 
 @font-face {
     font-family: 'TTFirsNeue';
+    font-display: swap;
     src: local(''), url('./fonts/TTFirsNeue-Bold.woff2') format('woff2'), url('./fonts/TTFirsNeue-Bold.woff') format('woff');
     font-style: normal;
     font-weight: 700;
@@ -135,6 +138,7 @@ svg path {
 
 @font-face {
     font-family: 'TTFirsNeue';
+    font-display: swap;
     src: local(''), url('./fonts/TTFirsNeue-Medium.woff2') format('woff2'), url('./fonts/TTFirsNeue-Medium.woff') format('woff');
     font-style: normal;
     font-weight: 500;
@@ -143,6 +147,7 @@ svg path {
 
 @font-face {
     font-family: 'TTFirsNeue';
+    font-display: swap;
     src: local(''), url('./fonts/TTFirsNeue-Regular.woff2') format('woff2'), url('./fonts/TTFirsNeue-Regular.woff') format('woff');
     font-style: normal;
     font-weight: 400;
@@ -151,6 +156,7 @@ svg path {
 
 @font-face {
     font-family: 'Muller';
+    font-display: swap;
     src: local(''), url('./fonts/MullerRegular.woff2') format('woff2'), url('./fonts/MullerRegular.woff') format('woff');
     font-style: normal;
     font-weight: 400;
@@ -159,6 +165,7 @@ svg path {
 
 @font-face {
     font-family: 'Muller';
+    font-display: swap;
     src: local(''), url('./fonts/MullerRegular.woff2') format('woff2'), url('./fonts/MullerRegular.woff') format('woff');
     font-style: normal;
     font-weight: 900;
@@ -175,8 +182,20 @@ svg path {
         overflow: hidden;
     }
 
-body {
+html, body {
+    height: 100%;
     font-family: 'Roboto', 'TTFirsNeue', 'Muller', sans-serif;
+}
+
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+    display: flex;
 }
 
 .container {
@@ -242,19 +261,22 @@ button::-moz-focus-inner {
     }
 }
 
+@media (max-width:1050px) {
+    .title {
+        font-size: 40px;
+    }
+}
+
 @media (max-width:890px) {
     .container {
         @include containerStyle768
     }
-    .btnmain {
-        padding: 13px 22px;
+    .title {
+        font-size: 32px;
     }
 }
 
 @media (max-width:683px) {
-    .container {
-        @include containerStyle320
-    }
     .btnmain {
         padding: 10px 22px;
         font-size: 14px;
@@ -270,5 +292,9 @@ button::-moz-focus-inner {
     .btnmain_empty:hover {
         border: 3px solid $colorBlue;
         background-color: transparent;
+    }
+    .title {
+        font-size: 28px;
+        text-align: center;
     }
 }

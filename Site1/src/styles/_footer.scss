@@ -14,3 +14,13 @@
     padding-top: 24px;
     padding-bottom: 24px;
 }
+
+.footer-logo {
+    font-size: 14px;
+}
+
+@media (max-width:683px) {
+    .footer-logo {
+        font-size: 10px;
+    }
+}

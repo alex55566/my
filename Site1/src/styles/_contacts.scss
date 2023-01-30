@@ -1,76 +1,113 @@
 .section__contacts {
-    margin-bottom: $paragraphGap;
-}
+    display: flex;
+    flex: 1;
+  }
 
-.form-client-info {
-    max-width: 900px;
+
+.section-contacts__container {
     display: flex;
     flex-direction: column;
-    position: relative;
-}
-.client-info-order {
-    margin-bottom: 40px;
+    justify-content: center;
+    flex: 1 0 auto;
 }
 
 
-.client-info-field {
-    @include input;
-    padding: 15px 23px;
-    border: 1px solid transparent;
-    margin-bottom: 30px;
+.companybank__data {
+    font: {
+        size: 18px;
+        weight: 600;
+    }
 }
 
-.inputs-form__comments {
-    margin-bottom: 30px;
+.bankdata__line {
+    font: {
+        family: 'TTFirsNeue';
+        size: 16px;
+        weight: 400;
+    }
 }
 
-.inputs-form__comments {
-    @include input;
+.bankdata__title {
+    font-weight: 600;
+}
+
+.bankdata {
+    margin-bottom: 22px
+}
+
+.contacts-mail__mail {
+    fill: $colorSilver;
+}
+
+.contacts-mail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: 185px;
+    font : {
+        family: 'TTFirsNeue';
+        size: 18px;
+    }
+
     cursor: pointer;
-    position: relative;
-    padding-top: 15px;
-    padding-left: 23px;
-    height: 150px;
+}
+.contacts-mail__text {
+    padding-right: 5px;
+}
+.contacts-mail:hover {
+    color: $colorBlue;
+}
+.contacts-mail:hover > .contacts-mail__mail {
+   fill: $colorBlue;
 }
 
-.js-validate-error-label {
-    @include fontParagraph;
-    left: 23px;
+.contacts-mail:focus {
+    color: $colorBlue;
+}
+.contacts-mail:focus > .contacts-mail__mail {
+   fill: $colorBlue;
+}
+
+@media(max-width:1050px) {
+.contacts-mail {
     font-size: 14px;
 }
-
-.client-name+.js-validate-error-label {
-    position: absolute;
-    top: 40px
+.bankdata__line {
+        font-size: 14px;
+}
 }
 
-.client-phone+.js-validate-error-label {
-    position: absolute;
-    top: 120px
+@media(max-width:683px) {
+.contacts-mail {
+    justify-content: center;
+    max-width: unset;
 }
 
-.client-email+.js-validate-error-label {
-    position: absolute;
-    top: 200px
+.bankdata {
+        text-align: center;
+}
+    
+.companybank__data {
+    font: {
+        size: 16px;
+        weight: 400;
+    }
 }
 
-.form-order {
-    max-width: 126px;
+.section__contacts {
+    padding-top: 60px;
 }
 
-.form-order:hover ::placeholder {
-    color: $colorBlue
+.section-contacts__container {
+    display: unset;
+    flex: unset;
+    flex-direction: unset;
+    justify-content: unset;
+}
 }
 
-.form-order:hover::-webkit-input-placeholder {
-    color: $colorBlue
-}
 
-.form-order:hover ::-webkit-input-placeholder {
-    color: $colorBlue
-}
 
-.form-order:focus {
-    border: 1px solid $colorBlue;
-}
+  
 

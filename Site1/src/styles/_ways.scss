@@ -1,18 +1,21 @@
 @import 'variables';
 .section__ways {
-    margin-bottom: $paragraphGap;
     background-color: $colorBlack;
     color: $colorWhite;
+    display: flex;
+    flex: 1;
 }
 
 .section-ways__container {
-    padding-top: $sectionTopGap;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .ways-card__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    grid-auto-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: $gridGap;
     padding-top: 32px;
     padding-bottom: 68px;
@@ -25,6 +28,24 @@
     text-align: center;
 }
 
-.ways-card-item__title {
-    margin-bottom: 25px;
+@media (max-width:1050px) {
+.ways-card-item__title{
+    font-size: 16px;
+}
+}
+
+@media (max-width:683px) {
+.ways-card__container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.section__ways {
+    padding-top: 60px;
+}
+.section-ways__container {
+    display: unset;
+    flex: unset;
+    flex-direction: unset;
+    justify-content: unset;
+}
 }

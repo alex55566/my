@@ -1,16 +1,49 @@
-    @import 'variables';
-    @import 'mixin';
+@import 'variables';
+@import 'mixin';
 
-    .empty-text {
-        font : {
-            family: 'TTFirsNeue';
-            size: 18px;
-        }
-    }
+.empty-text, .contacts__mail {
+  font : {
+    family: 'TTFirsNeue';
+    size: 18px;
+  }
+}
 
-    .section__news,  .section__vacancy {
-        margin-bottom: $paragraphGap;
-       
-    }
+.section__news,  .section__vacancy, .section__error {
+  display: flex;
+  flex: 1;
+}
+
+.section-news__container,  .section-vacancy__container, .section-error__container {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media(max-width:1050px) {
+  .empty-text, .contacts__mail {
+    font-size: 14px;
+  }
+}
+
+@media(max-width:683px) {
+  .section__news,  .section__vacancy, .section__error {
+    padding-top: 60px;
+  }
+  .empty-text {
+    text-align: center;
+  }
+
+  .contacts__mail {
+    font-size: 12px;
+  }
+
+  .section-news__container,  .section-vacancy__container, .section-error__container  {
+    display: unset;
+    flex: unset;
+    flex-direction: unset;
+    justify-content: unset;
+  }
+}
 
   

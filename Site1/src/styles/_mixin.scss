@@ -6,20 +6,14 @@
 
 @mixin containerStyle1024 {
     margin: 0 auto;
-    padding: 0 12px;
-    max-width: 987px;
+    padding: 0 50px;
+    max-width: 1215px;
 }
 
 @mixin containerStyle768 {
     margin: 0 auto;
-    padding: 0 12px;
-    max-width: 738px;
-}
-
-@mixin containerStyle320 {
-    margin: 0 auto;
-    padding: 0 12px;
-    max-width: 302px;
+    padding: 0 15px;
+    max-width: 769px;
 }
 
 @mixin fontHeader {

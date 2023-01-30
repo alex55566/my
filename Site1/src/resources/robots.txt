@@ -1,0 +1,11 @@
+﻿User-agent: *
+Disallow: /fonts
+Disallow: /images
+
+User-agent: Yandex
+Allow: /
+Sitemap: https://arxinfo.online//sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Sitemap: https://arxinfo.online//sitemap.xml

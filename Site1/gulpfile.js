@@ -1,5 +1,7 @@
 const { src, dest, series, watch } = require('gulp')
 
+const webpack = require('webpack-stream');
+
 const concat = require('gulp-concat')
 
 const htmlMin = require('gulp-htmlmin')
@@ -72,20 +74,6 @@ const stylesProd = () => {
         .pipe(browserSync.stream())
 }
 
-const php = () => {
-    return src('src/php/*.php',)
-        .pipe(dest('dist'))
-        // следит за изменением файлов
-        .pipe(browserSync.stream())
-}
-
-const phpFolder = () => {
-    return src('src/php/PHPMailer/**',)
-        .pipe(dest('dist/PHPMailer/'))
-        // следит за изменением файлов
-        .pipe(browserSync.stream())
-}
-
 const htmlDev = () => {
     return src('src/**/*.html')
         .pipe(dest('dist'))
@@ -145,6 +133,40 @@ const scriptsProd = () => {
         .pipe(browserSync.stream())
 }
 
+const scriptsProdReact = () => {
+    return src([
+        'src/react/react.js',
+    ])
+        .pipe(babel({
+            presets: ['@babel/preset-react']
+        }))
+        .pipe(
+            webpack({
+                mode: 'development',
+                output: {
+                    filename: 'index.js',
+                },
+                devtool: "eval-cheap-source-map",
+                module: {
+                    rules: [
+                        {
+                            test: /\.jsx?$/,
+                            loader: 'babel-loader',
+                            exclude: /node_modules/,
+                            // query: {
+                            // presets: ['es2015']
+                            // }
+                        }
+                    ],
+                }
+
+            })
+        )
+        .pipe(concat('index.js'))
+        .pipe(uglify().on('error', notify.onError()))
+        .pipe(dest('dist'))
+        .pipe(browserSync.stream())
+}
 
 const watchFiles = () => {
     browserSync.init({
@@ -153,7 +175,6 @@ const watchFiles = () => {
         }
     })
 }
-
 
 const images = () => {
     return src([
@@ -175,10 +196,11 @@ watch('src/styles/**/*.css', stylesProd)
 watch('src/images/svg/**/*.svg', svgSprites)
 watch('src/js/**/*.js', scriptsDev)
 watch('src/js/**/*.js', scriptsProd)
+watch('src/react/**/*.js', scriptsProdReact)
 watch('src/resources/**', resources)
 watch('src/images/**', images)
 
 exports.clean = clean
-exports.build = series(clean, php, phpFolder, fonts, stylenormalize, resources, htmlDev, scriptsDev, stylesDev, images, svgSprites, watchFiles)
-exports.production = series(clean, php, phpFolder, fonts, stylenormalize, resources, htmlProd, scriptsProd, stylesProd, images, svgSprites, watchFiles)
-exports.default = series(clean, php, phpFolder, fonts, stylenormalize, resources, htmlProd, scriptsProd, stylesProd, images, svgSprites, watchFiles)
+exports.build = series(clean, fonts, stylenormalize, resources, htmlDev, scriptsDev, scriptsProdReact, stylesDev, images, svgSprites, watchFiles)
+exports.production = series(clean, fonts, stylenormalize, resources, htmlProd, scriptsProd, scriptsProdReact, stylesProd, images, svgSprites, watchFiles)
+exports.default = series(clean, fonts, stylenormalize, resources, htmlProd, scriptsProd, scriptsProdReact, stylesProd, images, svgSprites, watchFiles)
